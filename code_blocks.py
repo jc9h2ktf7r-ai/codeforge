@@ -199,7 +199,7 @@ def get_block(path: str, qual: str) -> dict:
         return None
     lines = src.splitlines()
     body = "\n".join(lines[b["start"] - 1:b["end"]])
-    return {**b, "body": body}
+    return {**b, "code": body}
 
 
 def _renormalize(code: str, target: int) -> str:
